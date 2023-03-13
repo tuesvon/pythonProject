@@ -43,9 +43,5 @@ class test_RegForm(unittest.TestCase):
         browser.quit()
 
 
-def assertEqual():
-    self.assertEqual(test_RegForm)
-
-
 if __name__ == '__main__':
     unittest.main()
