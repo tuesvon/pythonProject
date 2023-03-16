@@ -16,7 +16,7 @@ try:
     input3 = browser.find_element(By.NAME, 'email')
     input3.send_keys('d@d.ru')
     current_dir = os.path.abspath(os.path.dirname(__file__))
-    file_name = "file.txt"
+    file_name = "../file.txt"
     file_path = os.path.join(current_dir, file_name)
     file = browser.find_element(By.ID, 'file')
     file.send_keys(file_path)
