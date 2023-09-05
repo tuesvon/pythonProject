@@ -9,9 +9,12 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-#выполнение условий задачи
+
+    # выполнение условий задачи
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))
+
+
     x_element = browser.find_element(By.ID, 'input_value')
     x = x_element.text
     y = calc(x)
@@ -23,7 +26,7 @@ try:
     input3.click()
     print(y)
 
-#нажатие на кнопку submit
+    # нажатие на кнопку submit
     button = browser.find_element(By.CLASS_NAME, 'btn-default')
     button.click()
 finally:
