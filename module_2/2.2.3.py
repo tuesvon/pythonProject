@@ -16,7 +16,6 @@ try:
     browser.find_element(By.CLASS_NAME, 'custom-select').click()
     select = Select(browser.find_element(By.TAG_NAME, "select"))
     select.select_by_visible_text('%s' % sum_el)
-
     button = browser.find_element(By.CLASS_NAME, 'btn-default')
     button.click()
 
