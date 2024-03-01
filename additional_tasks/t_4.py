@@ -33,4 +33,4 @@ def test_shopping(browser):
     browser.find_element(By.CSS_SELECTOR, "#offerActions > div > div._1Jo-W.cia-vs.cia-cs").click()
     time.sleep(1) #для того, чтобы появилось количество добавленных товаров
     qty = browser.find_element(By.CSS_SELECTOR, "#offerActions > div > div._1Jo-W.cia-vs.cia-cs > div > a").text
-    assert qty == '1', "Всё верно"
+    assert qty == '1', "Что-то пошло не так"

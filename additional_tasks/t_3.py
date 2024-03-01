@@ -20,4 +20,4 @@ def test_authorization(browser):
     sign_in_button = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Войти")))
     sign_in_button.click()
     l_field = wait.until(EC.visibility_of_element_located((By.ID, "identifierId")))
-    assert l_field.is_displayed(), "Поле ввода email отображается"
+    assert l_field.is_displayed(), "Поле ввода email не отображается"
