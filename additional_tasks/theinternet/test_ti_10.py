@@ -1,14 +1,6 @@
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 link = 'https://the-internet.herokuapp.com/dropdown'
-@pytest.fixture
-def browserChrome():
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
-
 
 def test_dropdown(browser):
     browser.get(link)

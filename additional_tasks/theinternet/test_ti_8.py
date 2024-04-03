@@ -1,18 +1,8 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import pytest
 
 link = 'https://the-internet.herokuapp.com/disappearing_elements'
-
-
-@pytest.fixture
-def browserChrome():
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
-
 
 def test_elements(browser):
     browser.get(link)

@@ -1,14 +1,7 @@
 #Basic Auth
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 link = 'https://admin:admin@the-internet.herokuapp.com/basic_auth'
-@pytest.fixture
-def browser():
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
 
 def test_basicauth(browser):
     browser.implicitly_wait(5)

@@ -1,17 +1,8 @@
 #Checkboxes
 
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-link = 'https://the-internet.herokuapp.com/checkboxes'
-@pytest.fixture()
-def browserChrome():
-    print("\nЗапуск теста")
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
-    print("\nЗавершение теста")
 
+link = 'https://the-internet.herokuapp.com/checkboxes'
 def test_checkboxes(browser):
     browser.implicitly_wait(5)
     browser.get(link)

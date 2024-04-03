@@ -1,15 +1,7 @@
 #Add/Remove Elements
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 link = 'https://the-internet.herokuapp.com/add_remove_elements/'
-
-@pytest.fixture
-def browser():
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
 
 def test_add(browser):
     browser.implicitly_wait(5)

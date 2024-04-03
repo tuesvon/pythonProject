@@ -1,17 +1,8 @@
 #Challenging DOM
-import pytest
-from selenium import webdriver
+
 from selenium.webdriver.common.by import By
 
 link = 'https://the-internet.herokuapp.com/challenging_dom'
-
-@pytest.fixture
-def browser():
-    print("\nНачало теста")
-    browser = webdriver.Chrome()
-    yield browser
-    browser.quit()
-    print("\nТест завершён")
 
 def test_challdom(browser):
     browser.get(link)
